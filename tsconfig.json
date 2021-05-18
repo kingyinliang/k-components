@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmit": true,
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -7,8 +8,9 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false, // 变量等必须初始化
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
@@ -18,6 +20,12 @@
     ],
     "paths": {
       "@/*": [
+        "examples/*"
+      ],
+      "packages/*": [
+        "packages/*"
+      ],
+      "src/*": [
         "src/*"
       ]
     },
@@ -29,9 +37,10 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+    "examples/**/*",
+    "examples/**/*.ts",
+    "examples/**/*.tsx",
+    "examples/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
